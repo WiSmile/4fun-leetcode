@@ -16,11 +16,7 @@ class Solution {
             return 0;
         }
 
-        $arrStart = [];
-        foreach ($points as $point) {
-            $arrStart[] = $point[0];
-        }
-
+        $arrStart = array_column($points, 0);
         array_multisort($arrStart, SORT_ASC, $points);
 
         $cnt = 1;
